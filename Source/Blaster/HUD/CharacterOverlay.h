@@ -1,0 +1,54 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Blueprint/UserWidget.h"
+#include "CharacterOverlay.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class BLASTER_API UCharacterOverlay : public UUserWidget
+{
+	GENERATED_BODY()
+	
+public:
+	
+	void NativeConstruct();
+
+	UPROPERTY(meta = (BindWidget))
+	class UProgressBar* HealthBar;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* HealthText;
+
+	UPROPERTY(meta = (BindWidget))
+	UProgressBar* ShieldBar;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* ShieldText;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* ScoreAmount;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* DefeatScreen;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* DefeatsAmount;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* WeaponAmmoAmount;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* CarriedAmmoAmount;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* EquippedWeapon;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* MatchCountdownText;
+
+};
